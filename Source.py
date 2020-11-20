@@ -146,7 +146,11 @@ def off():
     s = 0
     eel.update_time(str(w) + ' menit')
     eel.update_temp(str(s) + '°C')
-    eel.update_status("Mematikan Mesin")
+    eel.update_status("Mematikan Mesin Cuci")
+    eel.sleep(1)
+    eel.update_status("Mematikan Mesin Cuci.")
+    eel.sleep(1)
+    eel.update_status("Mematikan Mesin Cuci..")
     eel.sleep(1)
     eel.update_status('Selamat Tinggal!')
     eel.sleep(1)
