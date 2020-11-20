@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="eel.js"></script>
+    <script>
+        function start() {
+            eel.start();
+        }
+
+        function stop() {
+            eel.stop();
+        }
+
+        function animasi() {
+            eel.animasi();
+        }
+
+         function stop_animasi() {
+            eel.stop_animasi();
+        }
+
+        function tambah_waktu() {
+            eel.tambah_waktu();
+        }
+
+        function kurang_waktu() {
+            eel.kurang_waktu();
+        }
+
+        function tambah_temp() {
+            eel.tambah_temp();
+        }
+
+        function kurang_temp() {
+            eel.kurang_temp();
+        }
+
+        function custom() {
+            eel.custom();
+        }
+
+        function synthetic() {
+            eel.synthetic();
+        }
+
+        function wool() {
+            eel.wool();
+        }
+
+        function cotton() {
+            eel.cotton();
+        }
+
+        function quick_wash() {
+            eel.quick_wash();
+        }
+
+        function daily_wash() {
+            eel.daily_wash();
+        }
+
+        function on() {
+            eel.on();
+        }
+
+        function off() {
+            eel.off();
+        }
+
+        eel.expose(update_time);
+        function update_time(waktu) {
+            document.querySelector(".container-right-top").innerHTML = waktu;
+        }
+        eel.expose(update_temp);
+        function update_temp(temp) {
+            document.querySelector(".container-right-bottom").innerHTML = temp;
+        }
+        eel.expose(update_status);
+        function update_status(status) {
+            document.querySelector(".container-status").innerHTML = status;
+        }
+        eel.expose(window_close);
+        function window_close() {
+            window.close()
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Mesin Cuci</title>
+</head>
+<body>
+    <div class="container-right"></div>
+    <button type="button" class="start" onclick="start(), animasi()">Start</button>
+    <button type="button" class="stop" onclick="stop(), stop_animasi()">Stop</button>
+    <button type="button" class="time-tambah" onclick="tambah_waktu(), custom()">+</button>
+    <button type="button" class="time-kurang" onclick="kurang_waktu(), custom()">-</button>
+    <button type="button" class="temp-tambah" onclick="tambah_temp(), custom()">+</button>
+    <button type="button" class="temp-kurang" onclick="kurang_temp(), custom()">-</button>
+    <div class="container-right-top">0 menit</div>
+    <div class="container-right-bottom">0°C</div>
+    <button type="button" class="custom" onclick="custom()">Custom</button>
+    <button type="button" class="synthetic" onclick="synthetic()">Synth</button>
+    <button type="button" class="wool" onclick="wool()">Wool</button>
+    <button type="button" class="cotton" onclick="cotton()">Cotton</button>
+    <button type="button" class="quick-wash" onclick="quick_wash()">Quick Wash</button>
+    <button type="button" class="daily-wash" onclick="daily_wash()">Daily Wash</button>
+    <button type="button" class="on" onclick="on()">On</button>
+    <button type="button" class="off" onclick="off()">Off</button>
+    <div class="container-status"></div>
+</body>
+</html>
